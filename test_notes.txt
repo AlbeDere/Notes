@@ -1,0 +1,3 @@
+Note 1: Test the note manager
+Note 2: Ensure notes are saved correctly
+Note 3: Check note retrieval functionality

@@ -1,7 +1,10 @@
+// main.go
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Welcome to the Notes Tool!")
+	fmt.Println("Welcome to the notes tool!")
 }
