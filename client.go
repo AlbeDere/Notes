@@ -1,4 +1,3 @@
-// cli.go
 package main
 
 // Print the help message
