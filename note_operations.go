@@ -1,23 +1,43 @@
-// note_operations.go
 package main
 
 import (
 	"fmt"
 	"strconv"
+	"strings"
+	"time"
 )
 
-// Add a note
-func addNote(notes []string) []string {
-	fmt.Println("\nEnter the note text:")
-	note := getUserInput()
-	if note != "" {
-		notes = append(notes, note)
+// Note structure
+type Note struct {
+	Content   string
+	Timestamp string
+	Tags      []string
+}
+
+// Show notes
+func showNotes(notes []Note) {
+	fmt.Println("\nNotes:")
+	for i, note := range notes {
+		fmt.Printf("%03d - %s (Tags: %v, Timestamp: %s)\n", i+1, note.Content, note.Tags, note.Timestamp)
 	}
-	return notes
+}
+
+// Add a note
+func addNote() Note {
+	fmt.Println("\nEnter the note text:")
+	content := getUserInput()
+	fmt.Println("Enter tags (comma-separated):")
+	tags := strings.Split(getUserInput(), ",")
+
+	return Note{
+		Content:   content,
+		Timestamp: time.Now().Format(time.RFC822),
+		Tags:      tags,
+	}
 }
 
 // Delete a note
-func deleteNote(notes []string) []string {
+func deleteNote(notes []Note) []Note {
 	fmt.Println("\nEnter the number of note to remove or 0 to cancel:")
 	input := getUserInput()
 	noteNumber, err := strconv.Atoi(input)
@@ -31,14 +51,5 @@ func deleteNote(notes []string) []string {
 	}
 
 	index := noteNumber - 1
-	notes = append(notes[:index], notes[index+1:]...)
-	return notes
-}
-
-// Show notes
-func showNotes(notes []string) {
-	fmt.Println("\nNotes:")
-	for i, note := range notes {
-		fmt.Printf("%03d - %s\n", i+1, note)
-	}
+	return append(notes[:index], notes[index+1:]...)
 }
