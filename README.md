@@ -6,8 +6,8 @@ Databases are stored in separate <i>.txt</i> files.
 ### Usage
 
 #### 1. Starting the program:
-Open the program via terminal (cmd) with the command <code>>./Notestool myNotesExample</code> where <i>myNoteExample</i> refers to an existing database <i>.txt</i> file.
-(Use <code>>./Notestool help</code> for further help. )
+Open the program via terminal with the command <code>>./notestool myNotesExample</code> where <i>myNoteExample</i> refers to an existing database <i>.txt</i> file.
+(Use <code>>./notestool help</code> for further help. )
 
 #### 2. Operations
 If Notestool doesn't find your specified database file, it will create a new database with that name for note storing.
@@ -33,15 +33,14 @@ After any succesful operation (ex: 4. Exit) you will be returned back to the mai
 Inputing "1" will list all the existing notes in the current database. Notes will be numbered. 
 Example:
 
-    001 First note text
-    002 Second note text
+    001 - First note text (Tags: [Tech], Timestamp: 18 Aug 24 09:34 EEST)
+    002 - Second note text (Tags: [Cooking], Timestamp: 18 Aug 24 09:34 EEST)
     ...etc
 
 If no notes are present, you will be informed of that.
 
 #### 2.2 Add Notes
-Inputing "2" will prompt you to write the contents of your note. 
-In case of an empty input Notetool will let the user know that an *empty note was added*.
+Inputting "2" will prompt you to write the contents of your note. Additionally, you will be prompted to input a Tags to help distinguish the notes more easily. Each note will also have a timestamp indicating when it was created.
 
 #### 2.3 Remove Note
 Inputing "3" will ask the user for the number of the note to be removed.
