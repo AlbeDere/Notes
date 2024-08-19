@@ -42,6 +42,29 @@ If no notes are present, you will be informed of that.
 #### 2.2 Add Notes
 Inputting "2" will prompt you to write the contents of your note. Additionally, you will be prompted to input a Tags to help distinguish the notes more easily. Each note will also have a timestamp indicating when it was created.
 
+In case of an empty input, the Notes Tool will let the user know that an empty note was added.
+
+Select operation:
+1. Show notes.
+2. Add a note.
+3. Delete a note.
+4. Exit.
+
+Enter your choice: 2
+
+Enter the note text:
+Meeting notes
+
+Enter tags (comma-separated):
+work,meeting
+
+Note added successfully with timestamp: 18 Aug 24 09:34 EEST
+
+Full note:
+
+001 - Meeting notes (Tags: [work meeting], Timestamp: 18 Aug 24 09:42 EEST)
+
+
 #### 2.3 Remove Note
 Inputing "3" will ask the user for the number of the note to be removed.
 By inputing "0" you will cancel this operation.
