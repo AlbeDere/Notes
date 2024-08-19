@@ -44,19 +44,24 @@ Inputting "2" will prompt you to write the contents of your note. Additionally, 
 
 In case of an empty input, the Notes Tool will let the user know that an empty note was added.
 
-Select operation:
-1. Show notes.
-2. Add a note.
-3. Delete a note.
-4. Exit.
 
-Enter your choice: 2
+    Welcome to NotesTool!
 
-Enter the note text:
-Meeting notes
+    Select operation (1-4):
+    1. Show Notes
+    2. Add Note
+    3. Remove Note
+    4. Exit
 
-Enter tags (comma-separated):
-work,meeting
+    
+    Enter your choice: 2
+
+    Enter the note text:
+    Meeting notes
+
+    Enter tags (comma-separated):
+    work,meeting
+
 
 Note added successfully with timestamp: 18 Aug 24 09:34 EEST
 
